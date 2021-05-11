@@ -4,7 +4,6 @@ This is an open source clone of notepad.cc, which is now defunct.
 
 See demo at https://notes.orga.cat or https://notes.orga.cat/whatever.
 
-A version that allows for optional encryption using the Web Crypto API is available at the [encryption](https://github.com/pereorga/minimalist-web-notepad/tree/encryption) branch.
 
 ## Installation
 
@@ -35,7 +34,6 @@ location ~* ^/notes/([a-zA-Z0-9_-]+)$ {
     try_files $uri /notes/index.php?note=$1;
 }
 ```
-
 ### Docker
 
 Build the container:
@@ -45,26 +43,12 @@ docker build -t minimalist-web-notepad .
 
 Start the container:
 ```
-docker run -d --name minimalist-web-notepad -p 80:80 minimalist-web-notepad
-```
-
-Show logs:
-```
-docker logs -f minimalist-web-notepad
-```
-
-Stop the container:
-```
-docker stop minimalist-web-notepad
+docker run -it --name minimalist-web-notepad -p 80:80 minimalist-web-notepad
 ```
 
 Alternatively, docker-compose can also be used:
 ```
 docker-compose up -d
-```
-and
-```
-docker-compose down
 ```
 
 #### Environment variables
@@ -72,6 +56,11 @@ docker-compose down
 `MWN_BASE_URL`    The base URL for redirection and assets. Defaults to ''.
 
 `MWN_SAVE_PATH`   The path to save the notes to. Relative paths are relative to `index.php` location.
+
+`MWN_ENCRYPTION`  Enable encryption when not empty.
+
+`MWN_CRYPTO_SALT` Random static salt to use for encryption.
+
 
 ## Screenshots
 
