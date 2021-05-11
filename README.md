@@ -34,7 +34,6 @@ location ~* ^/notes/([a-zA-Z0-9_-]+)$ {
     try_files $uri /notes/index.php?note=$1;
 }
 ```
-
 ### Docker
 
 Build the container:
