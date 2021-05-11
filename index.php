@@ -8,8 +8,8 @@ $base_url = getenv('MWN_BASE_URL') ?: 'https://notes.orga.cat';
 $save_path = getenv('MWN_SAVE_PATH') ?: '_tmp';
 
 // Salt for encryption
-$encryption = getenv('MWN_ENCRYPTION') ?: false;
-$salt = getenv('MWN_CRYPTO_SALT') ?: 'c36g0bZfykx254eyzQNZ8SNR0gT78D89';
+$encryption = getenv('MWN_ENCRYPTION') ?: true;
+$salt = getenv('MWN_CRYPTO_SALT') ?: 'K2keJ4gfhPKEp2AMvbW8YRQq5Qr6x5R5';
 
 // Disable caching.
 header('Cache-Control: no-cache, no-store, must-revalidate');
@@ -20,7 +20,7 @@ header('Expires: 0');
 if (!isset($_GET['note']) || !preg_match('/^[a-zA-Z0-9_-]+$/', $_GET['note']) || strlen($_GET['note']) > 64) {
 
     // Generate a name with 5 random unambiguous characters. Redirect to it.
-    header("Location: $base_url/" . substr(str_shuffle(str_repeat('23456789abcdefghjkmnpqrstwxyz', 5)), -5));
+    header("Location: $base_url/" . substr(str_shuffle(str_repeat('23456789abcdefghjkmnpqrstwxyz', 7)), -7));
     die;
 }
 
