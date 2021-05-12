@@ -1,5 +1,7 @@
 # Minimalist Web Notepad
 
+[![Build Status](https://drone.app.onlineer.de/api/badges/deepDiverPaul/minimalist-web-notepad/status.svg)](https://drone.app.onlineer.de/deepDiverPaul/minimalist-web-notepad)
+
 This is an open source clone of notepad.cc, which is now defunct.
 
 See demo at https://notes.orga.cat or https://notes.orga.cat/whatever.
