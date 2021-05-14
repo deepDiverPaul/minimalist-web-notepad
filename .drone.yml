@@ -15,7 +15,7 @@ steps:
         - latest
     when:
       branch:
-        -master
+        - master
 
 trigger:
   event:
