@@ -8,11 +8,6 @@ forked from [pereorga/minimalist-web-notepad](https://github.com/pereorga/minima
 
 ## Installation
 
-At the top of `index.php` file, change `$base_url` variable to point to your
-site.
-
-Make sure the web server is allowed to write to the `_tmp` directory.
-
 ### Docker
 
 Start the container:
