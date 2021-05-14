@@ -12,13 +12,10 @@ steps:
       repo: onlineer/minimalist-web-notepad
       tags:
         - latest
-    when:
-      branch:
-        - master
 
 trigger:
-  event:
-    - pull_request
+  branch:
+  - master
 
 
 ---
