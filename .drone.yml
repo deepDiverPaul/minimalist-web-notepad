@@ -12,19 +12,25 @@ steps:
       repo: onlineer/minimalist-web-notepad
       tags:
         - latest
+
+trigger:
+  event:
+    - push
+    - pull_request
+    -
 ---
 kind: pipeline
 name: deploy
 
-  steps:
+steps:
   - name: deploy
     image: plugins/webhook
     settings:
       urls:
         from_secret: deploy_webhook
 
-  trigger:
-    event:
+trigger:
+  event:
     - promote
-    target:
+  target:
     - production
