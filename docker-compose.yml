@@ -5,9 +5,9 @@ services:
     container_name: minimalist-web-notepad
     restart: always
     ports:
-     - "80:80"
+     - "4080:80"
     volumes:
-     - minimalist-web-notepad:/var/www/html/_tmp
+     - data:/var/www/html/_tmp
 
 volumes:
-  minimalist-web-notepad:
+  data:

@@ -4,6 +4,8 @@
 
 This is an open source clone of notepad.cc, which is now defunct.
 
+forked from [pereorga/minimalist-web-notepad](https://github.com/pereorga/minimalist-web-notepad)
+
 ## Installation
 
 At the top of `index.php` file, change `$base_url` variable to point to your
@@ -22,6 +24,7 @@ Alternatively, docker-compose can also be used:
 ```
 docker-compose up -d
 ```
+open http://localhost:8080 to get started
 
 #### Environment variables
 
