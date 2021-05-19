@@ -54,6 +54,7 @@ window.onload = async function() {
                 textarea.value = await decrypt(textarea.value, key);
             } catch(e) {
                 textarea.value = 'Unable to decrypt note. Please append the correct password to the URL "#<password>" and reload.';
+                textarea.disabled = true;
             }
         }
     }
